@@ -1,5 +1,56 @@
 <<<<<<< HEAD
 # chaos-experiment-final
+
+# Resultado
+
+## 🧪 Log real da execução
+
+```text
+MandyCro ➜ /workspaces/chaos-experiment-final/node-redis-app (main) $ chaos run redis-failure.json
+[2025-04-26 00:16:20 INFO] Validating the experiment's syntax
+[2025-04-26 00:16:20 INFO] Experiment looks valid
+[2025-04-26 00:16:20 INFO] Running experiment: Teste simples de falha no Redis
+[2025-04-26 00:16:20 INFO] Steady-state strategy: default
+[2025-04-26 00:16:20 INFO] Rollbacks strategy: default
+[2025-04-26 00:16:20 INFO] Steady state hypothesis: Aplicação está saudável
+[2025-04-26 00:16:20 INFO] Probe: verifica_servico_aplicacao
+[2025-04-26 00:16:20 INFO] Steady state hypothesis is met!
+[2025-04-26 00:16:20 INFO] Playing your experiment's method now...
+[2025-04-26 00:16:20 INFO] Action: parar_container_redis
+[2025-04-26 00:16:20 INFO] Probe: verifica_servico_aplicacao_apos_falha
+[2025-04-26 00:16:23 ERROR]   => failed: activity took too long to complete
+[2025-04-26 00:16:23 INFO] Action: iniciar_container_redis
+[2025-04-26 00:16:23 INFO] Steady state hypothesis: Aplicação está saudável
+[2025-04-26 00:16:23 INFO] Probe: verifica_servico_aplicacao
+[2025-04-26 00:16:24 INFO] Steady state hypothesis is met!
+[2025-04-26 00:16:24 INFO] Let's rollback...
+[2025-04-26 00:16:24 INFO] No declared rollbacks, let's move on.
+[2025-04-26 00:16:24 INFO] Experiment ended with status: completed
+
+📋 O que aconteceu de fato no log:
+
+[INFO] Probe: verifica_servico_aplicacao
+[INFO] Steady state hypothesis is met!
+
+🔹 1. Verificou se a aplicação responde (/health) – ✅ sucesso! A aplicação respondeu.
+
+
+[INFO] Action: parar_container_redis
+🔹 2. Parou o container Redis – ✅ docker stop redis foi executado com sucesso.
+
+[INFO] Probe: verifica_servico_aplicacao_apos_falha
+[ERROR] => failed: activity took too long to complete
+
+🔹 3. Verificou novamente a saúde da aplicação – ⚠️ falhou (como esperado), pois o Redis estava fora do ar.
+
+[INFO] Action: iniciar_container_redis
+
+🔹 4. Religa o Redis – ✅ docker start redis foi executado com sucesso.
+
+[INFO] Probe: verifica_servico_aplicacao
+[INFO] Steady state hypothesis is met!
+
+🔹 Verificou novamente que a aplicação voltou ao estado saudável – ✅
 =======
 
 # Engenharia do Caos com Chaos Toolkit, Node.js e Redis
