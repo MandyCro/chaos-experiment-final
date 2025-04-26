@@ -1,7 +1,7 @@
 {
   "chaoslib-version": "1.44.0",
   "platform": "Linux-6.8.0-1026-azure-x86_64-with-glibc2.31",
-  "node": "codespaces-ebaf4a",
+  "node": "codespaces-e8938d",
   "experiment": {
     "version": "1.0.0",
     "title": "Teste simples de falha no Redis",
@@ -61,7 +61,7 @@
     "rollbacks": [],
     "dry": null
   },
-  "start": "2025-04-25T23:29:24.795323+00:00",
+  "start": "2025-04-26T00:16:20.038732+00:00",
   "status": "completed",
   "deviated": false,
   "steady_states": {
@@ -87,16 +87,16 @@
               "Content-Type": "application/json; charset=utf-8",
               "Content-Length": "30",
               "ETag": "W/\"1e-UF0jTsFD9vB+n1yXcauIzFvQUGs\"",
-              "Date": "Fri, 25 Apr 2025 23:29:24 GMT",
+              "Date": "Sat, 26 Apr 2025 00:16:20 GMT",
               "Connection": "keep-alive",
               "Keep-Alive": "timeout=5"
             },
             "body": "{\"status\":\"ok\",\"redis\":\"pong\"}"
           },
-          "start": "2025-04-25T23:29:24.796023+00:00",
+          "start": "2025-04-26T00:16:20.039616+00:00",
           "status": "succeeded",
-          "end": "2025-04-25T23:29:24.803093+00:00",
-          "duration": 0.00707,
+          "end": "2025-04-26T00:16:20.046602+00:00",
+          "duration": 0.006986,
           "tolerance_met": true
         }
       ]
@@ -123,16 +123,16 @@
               "Content-Type": "application/json; charset=utf-8",
               "Content-Length": "30",
               "ETag": "W/\"1e-UF0jTsFD9vB+n1yXcauIzFvQUGs\"",
-              "Date": "Fri, 25 Apr 2025 23:29:29 GMT",
+              "Date": "Sat, 26 Apr 2025 00:16:24 GMT",
               "Connection": "keep-alive",
               "Keep-Alive": "timeout=5"
             },
             "body": "{\"status\":\"ok\",\"redis\":\"pong\"}"
           },
-          "start": "2025-04-25T23:29:28.263734+00:00",
+          "start": "2025-04-26T00:16:23.481539+00:00",
           "status": "succeeded",
-          "end": "2025-04-25T23:29:29.233563+00:00",
-          "duration": 0.969829,
+          "end": "2025-04-26T00:16:24.399494+00:00",
+          "duration": 0.917955,
           "tolerance_met": true
         }
       ]
@@ -155,10 +155,10 @@
         "stdout": "redis\n",
         "stderr": ""
       },
-      "start": "2025-04-25T23:29:24.803834+00:00",
+      "start": "2025-04-26T00:16:20.047805+00:00",
       "status": "succeeded",
-      "end": "2025-04-25T23:29:25.024692+00:00",
-      "duration": 0.220858
+      "end": "2025-04-26T00:16:20.231193+00:00",
+      "duration": 0.183388
     },
     {
       "activity": {
@@ -173,7 +173,7 @@
         }
       },
       "output": null,
-      "start": "2025-04-25T23:29:25.024994+00:00",
+      "start": "2025-04-26T00:16:20.231500+00:00",
       "status": "failed",
       "exception": [
         "Traceback (most recent call last):\n",
@@ -205,8 +205,8 @@
         "\nDuring handling of the above exception, another exception occurred:\n\n",
         "chaoslib.exceptions.ActivityFailed: activity took too long to complete\n"
       ],
-      "end": "2025-04-25T23:29:28.037083+00:00",
-      "duration": 3.012089
+      "end": "2025-04-26T00:16:23.241283+00:00",
+      "duration": 3.009783
     },
     {
       "activity": {
@@ -223,13 +223,13 @@
         "stdout": "redis\n",
         "stderr": ""
       },
-      "start": "2025-04-25T23:29:28.037464+00:00",
+      "start": "2025-04-26T00:16:23.241585+00:00",
       "status": "succeeded",
-      "end": "2025-04-25T23:29:28.262904+00:00",
-      "duration": 0.22544
+      "end": "2025-04-26T00:16:23.480529+00:00",
+      "duration": 0.238944
     }
   ],
   "rollbacks": [],
-  "end": "2025-04-25T23:29:29.234357+00:00",
-  "duration": 4.44067120552063
+  "end": "2025-04-26T00:16:24.400261+00:00",
+  "duration": 4.363133668899536
 }
